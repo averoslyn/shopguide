@@ -1,0 +1,190 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
+.hero {
+  width: 100%;
+  max-width: 1290px;
+  margin: $center-position;
+
+  color: $color-white;
+
+  @media (max-width: $breakpoint-middle) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 709px;
+  }
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 720px;
+
+  text-align: center;
+
+  @media (min-width: $breakpoint-middle) {
+    margin-top: 73px;
+  }
+
+  img {
+    @media (max-width: $breakpoint-middle) {
+      display: block;
+      width: 351px;
+      margin: $center-position;
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 107px;
+  margin: $center-position;
+
+  background-image: url("../images/promo-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+  background-size: cover;
+
+  @media (max-width: $breakpoint-middle) {
+    background-position: 50% -101px;
+    background-size: 409%;
+  }
+
+  @media (max-width: 389px) {
+    background-size: 500%;
+  }
+
+  @media (width: $breakpoint-xl) {
+    background-size: contain;
+  }
+
+}
+
+
+.hero__img-wrapper {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-middle) {
+    margin-top: 191px;
+  }
+}
+
+.hero__img-slogan {
+  position: relative;
+  left: 36px;
+
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+
+  background-color: $color-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -13px;
+
+    width: 15px;
+    height: 13px;
+
+    background-image: url("../../images/icons/popup-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: 390px) and (max-width: $breakpoint-middle) {
+    left: 75px;
+  }
+}
+
+.main-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.hero__buttons-wrapper {
+  max-width: 469px;
+}
+
+.hero__buttons-description {
+  position: relative;
+
+  display: block;
+  margin-bottom: 18px;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: lowercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    width: 36%;
+    max-width: 184px;
+    height: 1px;
+
+    background-color: $color-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 9px;
+
+    width: 36%;
+    max-width: 184px;
+    height: 1px;
+
+    background-color: $color-white;
+  }
+
+  @media (max-width: $breakpoint-middle) {
+    margin-bottom: 27px;
+  }
+}
+
+.hero__download-link {
+  width: 225px;
+  height: 65px;
+
+  @include button-opacity-states(0.7, 1, 0.3);
+}
+
+.app-store-link {
+
+  @media (min-width: $breakpoint-middle) {
+    margin-right: 13px;
+  }
+
+  @media (max-width: $breakpoint-middle) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero__phone {
+  @media (max-width: $breakpoint-middle) {
+    display: none;
+  }
+}
+
+.hero__scroll {
+  position: relative;
+}

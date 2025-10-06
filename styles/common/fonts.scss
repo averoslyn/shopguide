@@ -1,0 +1,7 @@
+@use "../common/mixins.scss" as *;
+
+@include font-face("FuturaDemiC", 400, normal, url("../../fonts/FuturaDemiC-Regular.woff2") format("woff2"));
+@include font-face("FuturaBook", 400, normal, url("../../fonts/FuturaBook-Regular.woff2") format("woff2"));
+@include font-face("Montserrat", 400, normal, url("../../fonts/Montserrat-Regular.woff2") format("woff2"));
+@include font-face("Montserrat", 600, normal, url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"));
+@include font-face("Montserrat", 700, normal, url("../../fonts/Montserrat-Bold.woff2") format("woff2"));

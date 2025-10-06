@@ -1,0 +1,61 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: transparent;
+}
+
+.scroll-button {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  width: 277px;
+  padding: 18px 60px;
+
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 15px;
+  box-shadow: 1px 4px 24px 0px rgba(0, 0, 0, 0.35);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 27px;
+    height: 12px;
+
+    background-image: url("../../images/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include button-bg-states(
+    $hover-bg: $color-primary-hover,
+    $focus-bg: $color-primary,
+    $active-bg: $color-primary-active
+  );
+}
+
+.scroll-button__label {
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+

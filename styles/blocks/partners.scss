@@ -1,0 +1,168 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
+
+.partners {
+  padding-top: 73px;
+
+  background-color: $color-white;
+
+  @media (max-width: 768px) {
+    padding-top: 80px;
+  }
+}
+
+
+.partners-wrapper {
+  background-color: $color-accent;
+}
+
+.partners__inner {
+  position: relative;
+
+  display: flex;
+  max-width: 1170px;
+  margin: $center-position;
+  padding: 45px 0px;
+}
+
+.partners__title {
+  padding-bottom: 28px;
+
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: $color-accent;
+
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+  }
+}
+
+.partners__offer {
+  padding-top: 64px;
+
+  @media (max-width: $breakpoint-middle) {
+    padding-top: 43px;
+  }
+}
+
+.offer__description {
+  max-width: 442px;
+  margin: $center-position;
+  margin-bottom: 30px;
+
+
+  font-family: $font-accent;
+  font-size: 24px;
+  line-height: 30px;
+
+  @media (max-width: $breakpoint-middle) {
+    max-width: 309px;
+    margin-bottom: 47px;
+  }
+}
+
+.offer__button {
+  margin-bottom: 60px;
+  padding: 20px 90px;
+
+  font-family: $font-heading;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-white;
+
+  background-color: $color-primary;
+  border-radius: 10px;
+
+  @media (max-width: $breakpoint-middle) {
+    margin-bottom: 40px;
+    padding: 20px 99px;
+  }
+
+  @include button-bg-states(
+    $hover-bg: $color-primary-hover,
+    $focus-bg: $color-primary,
+    $active-bg: $color-primary-active
+  );
+}
+
+.partners__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+
+  overflow: hidden;
+}
+
+.partners__img {
+  max-width: none;
+  opacity: 0.3;
+
+  &--active {
+  opacity: 1;
+  }
+}
+
+.partners__button {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+
+  background: $color-accent-secondary;
+
+  @media (min-width: $breakpoint-large) {
+    display: none;
+  }
+}
+
+.button-previous {
+  left: -5%;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 15px;
+    transform: translateX(200%);
+
+    background-image: url("../../images/icons/arrow-left.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: $breakpoint-large) {
+    left: 3%;
+    z-index: 10;
+  }
+
+}
+
+.button-next {
+  right: -5%;
+
+    &::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 15px;
+    transform: translateX(200%);
+
+    background-image: url("../../images/icons/arrow-right.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $breakpoint-large) {
+    right: 3%;
+  }
+}

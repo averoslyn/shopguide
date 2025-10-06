@@ -1,0 +1,117 @@
+@use "../common/variables.scss" as *;
+@use "../common/mixins.scss" as *;
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 43px 155px;
+
+  background-image: url("../../images/promo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 82%;
+
+  @media (max-width: $breakpoint-middle) {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 40px 70px;
+
+    background-size: 207%;
+    background-position: 51% 94%;
+  }
+}
+
+.footer-wrapper {
+  text-align: left;
+
+  @media (max-width: $breakpoint-middle) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+  }
+}
+
+.main-footer__copyright {
+  margin-bottom: 3px;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #F6F6F6;
+  letter-spacing: -0.05em;
+
+  @media (max-width: $breakpoint-middle) {
+    margin-bottom: 10px;
+  }
+}
+
+.main-footer__link {
+  margin-right: 36px;
+
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: $color-muted;
+  letter-spacing: -0.05em;
+
+  @media (max-width: $breakpoint-middle) {
+    margin-right: 0px;
+  }
+
+  &:hover {
+    color: #F6F6F6;
+  }
+
+  &:focus {
+    color: #F6F6F6;
+  }
+
+  &:active {
+    color: $color-muted;
+    opacity: 0.7;
+  }
+}
+
+.main-footer__contact-button {
+  max-height: 40px;
+  width: 234px;
+  border: 2px solid $color-white;
+  border-radius: 5px;
+  padding: 10px 20px 10px 52px;
+
+  @media (max-width: $breakpoint-middle) {
+    margin-bottom: 40px;
+  }
+
+  @include button-opacity-states(0.7, 1, 0.3);
+}
+
+.button-primary__text {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-white;
+  letter-spacing: -1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 22px;
+    transform: translate(-35px, 0px);
+    height: 20px;
+
+    background-image: url(../../images/icons/message-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

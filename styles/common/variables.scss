@@ -1,0 +1,20 @@
+$color-primary: #29D3D1;
+$color-primary-hover: lighten($color-primary, 10%);
+$color-primary-active: #3FBFBD;
+$color-accent: #EB645A;
+$color-accent-secondary: #ED6B62;
+$color-bg-light: #EDECEC;
+$color-bg-dark: #54483F;
+$color-white: #FFFFFF;
+$color-muted: #B5B5B5;
+$text-color: #000000;
+
+$font-primary: "Montserrat", sans-serif;
+$font-heading: "FuturaDemiC", sans-serif;
+$font-accent: "FuturaBook", sans-serif;
+
+$center-position: 0 auto;
+
+$breakpoint-middle: 768px;
+$breakpoint-large: 1300px;
+$breakpoint-xl: 1600px;

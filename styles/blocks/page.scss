@@ -1,0 +1,19 @@
+@use "../common/variables.scss" as *;
+
+.page {
+  height: 100%;
+
+  font-family: $font-primary;
+  font-size: 20px;
+  line-height: 25px;
+  color: $text-color;
+  text-align: center;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+
+  background-color: $color-bg-dark;
+}
+

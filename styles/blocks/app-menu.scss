@@ -1,0 +1,111 @@
+@use "../common/variables.scss" as *;
+
+.app-menu {
+  position: relative;
+
+  min-height: 430px;
+  padding-top: 60px;
+
+  background-color: $color-primary;
+  @media (max-width: $breakpoint-middle) {
+    display: none;
+  }
+}
+
+.app-menu__phone {
+  position: absolute;
+  top: -17%;
+  left: 271px;
+}
+
+.app-menu__screen {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+}
+
+.app-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.app-menu__list-item {
+  margin-right: 50px;
+
+  @media (max-width: 1599px) {
+    margin-right: 25px;
+  }
+
+  &:first-child {
+    margin-right: 42px;
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.app-menu__phone-item {
+  width: 277px;
+  margin-right: 47px;
+
+  @media (max-width: 1599px) {
+    margin-right: 17px;
+  }
+}
+
+.app-menu__button {
+  background-color: transparent;
+}
+
+.app-menu__title {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.7) ;
+  }
+}
+
+.app-menu__list-item--current .app-menu__title {
+  padding-bottom: 15px;
+  border-bottom: 4px solid $color-white;
+
+  color: $color-white;
+}
+
+.app-menu__description {
+  max-width: 687px;
+  margin-left: 595px;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  line-height: 30px;
+  color: $color-white;
+  text-align: left;
+
+  @media (max-width: 1599px) {
+    margin-left: 568px;
+  }
+}
+
+.app-menu__description span {
+  display: block;
+  margin-top: 19px;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.app-menu__description,
+.app-menu__screen {
+  transition: opacity 0.3s ease;
+}

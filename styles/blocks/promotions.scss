@@ -1,0 +1,100 @@
+@use "../common/variables.scss" as *;
+
+.promotions {
+  padding-top: 314px;
+
+  background-color: $color-white;
+
+  @media (max-width: $breakpoint-middle) {
+    padding-top: 0px;
+  }
+}
+
+.promotions-wrapper {
+  position: relative;
+
+  padding: 68px 0px 145px 266px;
+
+  background-color: $color-bg-light;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -67%;
+    left: 50%;
+
+    width: 402px;
+    height: 778px;
+
+    background-image: url("../../images/promotions-main-phone.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -41%;
+    left: 65%;
+
+    width: 349px;
+    height: 544px;
+
+    background-image: url("../../images/promotions-secondary-phone.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 0;
+  }
+
+  @media (max-width: 1465px) {
+    padding-left: 68px;
+  }
+
+  @media (max-width: $breakpoint-middle) {
+    padding: 0;
+
+    background-color: inherit;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.promotions__title {
+  max-width: 550px;
+  margin-bottom: 30px;
+
+
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-middle) {
+    text-align: center;
+  }
+}
+
+.promotions__description {
+  max-width: 550px;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+
+  @media (max-width: $breakpoint-middle) {
+    max-width: 350px;
+    margin: $center-position;
+
+    line-height: 36px;
+    text-align: center;
+  }
+}
